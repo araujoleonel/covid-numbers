@@ -1,0 +1,166 @@
+#contenedorHeaderNav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #aeaeae;
+  z-index: 100;
+}
+
+#headerNav {
+  width: 90%;
+  display: flex;
+}
+
+#contenedorHeaderNav  header {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 58px;
+  background: white;
+  padding-top: 2px;
+}
+
+.texto-covid {
+  font-size: 18px;
+}
+
+#linea1 {
+  height: 10px;
+  margin-bottom: 8px;
+}
+
+#linea2 {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+#covid-19 {
+  width: 180px;
+  height: 40px;
+}
+
+#contenedorHeaderNav img {
+  margin-right: 6px;
+}
+
+#contenedorHeaderNav h3 {
+  font-size: 24px;
+  margin-left: 6px;
+}
+
+#headerNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navega {
+  width: 40%;
+  height: 60px;
+  background: white;
+}
+
+#navega__contenedor {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+#navega__menu {
+  display: inline-flex;
+}
+
+.navega__enlaces {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.navega__enlaces a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #535151;
+}
+
+.navega__enlaces a:hover {
+  color: black;
+  transition: color 0.3s;
+}
+
+#navega_icono {
+  font-size: 30px;
+  display: none;
+}
+
+#navega_icono:hover {
+  cursor: pointer;
+}
+
+.navega__activo {
+  color: #777777;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 730px) {
+  #contenedorHeaderNav  header {
+    width: 90%;
+  }
+  #navega__menu {
+    display: block;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    padding: 40% 0;
+    z-index: 10;
+    transition: transform 1s;
+    left: 100%;
+    top: 0;
+    text-align: center;
+  }
+
+  .navega__enlaces a {
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+    
+  }
+
+  .navega__enlaces a:hover {
+    color: #535151;
+  }
+
+  #navega_icono {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texto-covid {
+    font-size: 14px;
+  }
+
+  #contenedorHeaderNav h3 {
+    font-size: 18px;
+  }
+
+  #covid-19 {
+    width: 140px;
+    height: 30px;
+  }
+
+
+  #linea1 {
+    margin-top: 4px;
+  }
+
+  #linea2 {
+    height: 30px;
+  }
+}
