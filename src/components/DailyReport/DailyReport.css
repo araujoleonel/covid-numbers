@@ -1,0 +1,120 @@
+.secciones {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
+.contenedor-seccion {
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.secciones__titulo {
+  font-size: 30px;
+  text-align: center;
+  color: #535151;
+  text-shadow: black 1px 1px 3px;
+}
+
+#diarios_contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+#diarios__select {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #535151;
+}
+
+#loading {
+  width: 60px;
+  height: 60px;
+  margin-left: 150px;
+}
+
+#reportados {
+  font-size: 18px;
+  color: #ababab;
+  text-shadow: black 1px 1px 1px;
+}
+
+#diarios_contenido select {
+  width: 140px;
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 5px 0 5px 10px;
+  border: 1px solid #828080;
+  border-radius: 6px;
+}
+
+#diarios__reporte {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 70%;
+  background: white;
+  border: 1px solid #c1bfbf;
+  border-radius: 10px;
+  box-shadow: #828080 2px 2px 4px;
+  padding: 10px 20px;
+}
+
+#reporte-del-dia {
+  flex: 1;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  background: #a9a9a9;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: #828080 2px 2px 4px;
+}
+
+#reporte-del-dia span {
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.diarios__data {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: 16px;
+}
+
+.diarios__datos {
+  display: flex;
+  align-items: center;
+  flex: 0.7;
+  margin-left: 10%;
+}
+
+.diarios__datos img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.diarios__valores {
+  flex: 0.3;
+  text-align: right;
+  font-weight: bold;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 850px) {
+  #diarios__reporte {
+    width: 100%;
+  }
+}
