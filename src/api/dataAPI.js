@@ -41,3 +41,34 @@ export async function getDataAPI() {
 	}
 }
 
+export async function getDataAPIdetail() {
+	try { 
+		var porEdo = {};
+		var porSex = {};
+		var porEda = {};
+		var resum = {};
+		var loadi = true;
+		//await axios.get('https://covid19.patria.org.ve/api/v1/summary').then(response => {
+		await axios.get('http://localhost/apiCovid/patria-summary.php').then(response => {
+			porEdo = response.data.Confirmed.ByState;
+			porSex = response.data.Confirmed.ByGender;
+			porEda = response.data.Confirmed.ByAgeRange;
+			resum = {
+				"Confirmed": response.data.Confirmed.Count,
+				"Recovered": response.data.Recovered.Count,
+				"Deaths": response.data.Deaths.Count,
+				"Active": response.data.Active.Count
+			};
+			loadi = false;
+		});
+		return {
+			load: loadi,
+			edo: porEdo,
+			sex: porSex,
+			eda: porEda,
+			resu: resum
+		};
+	} catch (error) {
+		console.error(error);
+	}
+}
