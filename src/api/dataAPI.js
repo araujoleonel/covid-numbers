@@ -8,8 +8,8 @@ export async function getDataAPI() {
 	var diadelreporte = '';
 	var loadi = true;
 	try { 
-		//await axios.get('https://covid19.patria.org.ve/api/v1/timeline').then(response => {
-		await axios.get('http://localhost/apiCovid/patria-timeline.php').then(response => {
+		await axios.get('https://covid19.patria.org.ve/api/v1/timeline').then(response => {
+		//await axios.get('http://localhost/apiCovid/patria-timeline.php').then(response => {
 			var nfechas = response.data.length;
 			var sw = 0;
 			for(var n=nfechas-1; n>=0; n--){
@@ -48,8 +48,8 @@ export async function getDataAPIdetail() {
 		var porEda = {};
 		var resum = {};
 		var loadi = true;
-		//await axios.get('https://covid19.patria.org.ve/api/v1/summary').then(response => {
-		await axios.get('http://localhost/apiCovid/patria-summary.php').then(response => {
+		await axios.get('https://covid19.patria.org.ve/api/v1/summary').then(response => {
+		//await axios.get('http://localhost/apiCovid/patria-summary.php').then(response => {
 			porEdo = response.data.Confirmed.ByState;
 			porSex = response.data.Confirmed.ByGender;
 			porEda = response.data.Confirmed.ByAgeRange;
